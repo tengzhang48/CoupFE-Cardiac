@@ -1,0 +1,88 @@
+{
+  "claim_boundary": "Comparison of one retained corrected-setup Step 2 Case B diagnostic with the pre-correction development run and the official ten-team envelope. Its compact record is provenance-incomplete and it is not a current-release result, reproduction, validation, or pass claim.",
+  "envelope_inside_fraction": {
+    "p0": {
+      "x": 0.7002997002997003,
+      "y": 0.3626373626373626,
+      "z": 0.6453546453546454
+    },
+    "p1": {
+      "x": 0.4875124875124875,
+      "y": 0.6933066933066933,
+      "z": 0.6033966033966034
+    }
+  },
+  "inputs": {
+    "corrected_npz": {
+      "name": "step2_caseb_local_pressure_ga_nt2_core20_rad17_tip6p0_t1p0.npz",
+      "sha256": "63a8de59b7b8b9ab309896ff69989d6ff89f6dfe2532151605486ad67967dd41"
+    },
+    "legacy_report": {
+      "name": "step2_case_b_std_kappa_2x20x17_dt0p001.report.json",
+      "sha256": "098e316daaea369a2a595cf43829d28597e53d2ff5a38cf32388e01c8dfa74aa"
+    },
+    "ten_team_dataset_doi": "10.5281/zenodo.14260459"
+  },
+  "plateau": {
+    "p0": {
+      "corrected_sign_matches_teams": true,
+      "corrected_z_range_mm": [
+        4.415495652023496,
+        4.773393294074798
+      ],
+      "legacy_sign_matches_teams": true,
+      "legacy_z_range_mm": [
+        3.425915481428523,
+        4.134396315316909
+      ],
+      "team_z_band_mm": [
+        4.276738147001205,
+        5.239638241
+      ],
+      "window_s": [
+        0.32,
+        0.48
+      ]
+    },
+    "p1": {
+      "corrected_sign_matches_teams": true,
+      "corrected_z_range_mm": [
+        0.24179224650412323,
+        0.5032272897204131
+      ],
+      "legacy_sign_matches_teams": false,
+      "legacy_z_range_mm": [
+        -0.6739999023831887,
+        -0.13295558866202797
+      ],
+      "team_z_band_mm": [
+        0.32554065216956635,
+        0.7866930066700001
+      ],
+      "window_s": [
+        0.32,
+        0.48
+      ]
+    }
+  },
+  "publisher_material_attribution": {
+    "creators": [
+      "Arostica Barrera, R.A.",
+      "Bertoglio, Cristobal"
+    ],
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_doi": "https://doi.org/10.5281/zenodo.14260459",
+    "source_title": "A software benchmark for cardiac elastodynamics",
+    "transformation_notice": "CoupFE-Cardiac selected ten Step 2 Case B team curves, linearly interpolated each curve to the corrected-run time grid, and computed the team mean, minimum/maximum envelope, containment fractions, and plateau summaries used in this report and SVG. These are modified/derived data; raw publisher pickle files are not redistributed."
+  },
+  "schema": "coupfe-cardiac-step2b-current-rerun-comparison-v1",
+  "versus_ten_team_mean": {
+    "p0": {
+      "relative_l2": 0.03756198084820198
+    },
+    "p1": {
+      "relative_l2": 0.05939411142259124
+    }
+  }
+}

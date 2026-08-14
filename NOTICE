@@ -1,0 +1,57 @@
+CoupFE-Cardiac
+Copyright 2026 CoupMech Lab contributors
+
+Project licensing
+-----------------
+
+Repository-authored source code, configuration, and tests are distributed
+under the Apache License, Version 2.0.
+
+Repository-authored Markdown documentation and the text/JSON evidence records
+under examples/cardiac_benchmark/results/ are licensed separately under
+Creative Commons Attribution 4.0 International as described in docs/LICENSE.md.
+
+The source distribution also includes one CC-BY-4.0 adaptation,
+examples/cardiac_benchmark/activation.py, and two MIT adaptations,
+examples/cardiac_benchmark/fiber_crosscheck.py and
+examples/cardiac_benchmark/structural_directions.py. The package license
+expression therefore records Apache-2.0 AND CC-BY-4.0 AND MIT. This aggregate
+expression does not relicense every file under all three licenses; the file
+boundaries and attribution records are in THIRD_PARTY_NOTICES.md and
+LICENSES/. The complete CC BY 4.0 license is included there.
+
+Benchmark specification
+-----------------------
+
+This application implements aspects of:
+
+Reidmen Aróstica et al., “A software benchmark for cardiac elastodynamics,”
+Computer Methods in Applied Mechanics and Engineering 435 (2025), 117485.
+https://doi.org/10.1016/j.cma.2024.117485
+
+The article is available under Creative Commons Attribution 4.0. The article
+is not included in this repository.
+
+Reference dataset
+-----------------
+
+R. A. Arostica Barrera and Cristobal Bertoglio, “A software benchmark for
+cardiac elastodynamics,” Zenodo record (2024).
+https://doi.org/10.5281/zenodo.14260459
+
+The dataset is licensed CC BY 4.0. Its approximately 23.2 GB archive and raw
+team pickle files are not vendored. Checked-in report JSON and SVG figures do
+contain transformed comparison material: interpolated team statistics,
+minimum/maximum envelopes, selected Simula curves, and derived metrics. These
+were computed by CoupFE-Cardiac from hash-pinned publisher files and are
+identified as modifications of the cited dataset, not raw publisher data.
+
+Third-party software
+--------------------
+
+The activation/pressure histories and fiber cross-check are adapted from
+implementations by Henrik Finsberg, Joakim Sundnes, and Jonas van den Brink,
+and by Reidmen Arostica, respectively. See THIRD_PARTY_NOTICES.md for exact
+revisions, license boundaries, attribution, and modification indications. The
+activation port uses the exact Zenodo v1.0.0 deposit's CC BY 4.0 record rather
+than relying on its incomplete README-only MIT record.

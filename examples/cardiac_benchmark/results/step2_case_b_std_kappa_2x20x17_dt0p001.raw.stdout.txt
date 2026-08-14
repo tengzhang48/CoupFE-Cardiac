@@ -1,0 +1,77 @@
+tbar: injected Laplace field runs/step2b/coarse_nt2_core20_rad17/tbar.npy (max |delta_tbar| vs analytic = 0.1616, implied max fiber-angle change 19.39 deg)
+tbar: injected Laplace field runs/step2b/coarse_nt2_core20_rad17/tbar.npy (max |delta_tbar| vs analytic = 0.1616, implied max fiber-angle change 19.39 deg)
+tbar: injected Laplace field runs/step2b/coarse_nt2_core20_rad17/tbar.npy (max |delta_tbar| vs analytic = 0.1616, implied max fiber-angle change 19.39 deg)
+tbar: injected Laplace field runs/step2b/coarse_nt2_core20_rad17/tbar.npy (max |delta_tbar| vs analytic = 0.1616, implied max fiber-angle change 19.39 deg)
+  Generated: build/step2b_coarse/mpi4/rank-00000/cardiac_hex8_generalized_alpha_std.for
+  Material:  HolzapfelOgdenActiveGeneralizedAlpha
+  Fields:    u
+  Element:   Hex8
+  Backend:   native
+  NDOFEL:    24
+  F-bar:     False
+  Tangent blocks: 1
+  Generated: build/step2b_coarse/mpi4/rank-00002/cardiac_hex8_generalized_alpha_std.for
+  Material:  HolzapfelOgdenActiveGeneralizedAlpha
+  Fields:    u
+  Element:   Hex8
+  Backend:   native
+  NDOFEL:    24
+  F-bar:     False
+  Tangent blocks: 1
+  Generated: build/step2b_coarse/mpi4/rank-00001/cardiac_hex8_generalized_alpha_std.for
+  Material:  HolzapfelOgdenActiveGeneralizedAlpha
+  Fields:    u
+  Element:   Hex8
+  Backend:   native
+  NDOFEL:    24
+  F-bar:     False
+  Tangent blocks: 1
+  Generated: build/step2b_coarse/mpi4/rank-00003/cardiac_hex8_generalized_alpha_std.for
+  Material:  HolzapfelOgdenActiveGeneralizedAlpha
+  Fields:    u
+  Element:   Hex8
+  Backend:   native
+  NDOFEL:    24
+  F-bar:     False
+  Tangent blocks: 1
+MPI mesh: 5403 nodes, 3520 hexes, ndof=16209, ranks=4
+BENCHMARK 1 STEP 2 CASE B (active-stress-plus-pressure): tau_peak=78728.0Pa  p_peak=16073.1Pa
+geometry: closed square-to-disk topology; no apex cut surface
+pre-solve boundary audit: {"geometry": {"boundary_policy": "closed_three_boundaries", "elements": 3520, "extended_condition_worst_location": [759, -1.0, 1.0, 1.0], "extended_jacobian_condition_max": 7.859546973575542, "extended_jacobian_min_m3": 1.236455937285853e-09, "extended_scaled_jacobian_min": 0.2593485024788769, "extended_scaled_jacobian_worst_location": [400, -1.0, -1.0, 1.0], "exterior_faces": 3680, "failures": [], "gauss_jacobian_condition_max": 7.2359791790886305, "gauss_jacobian_max_m3": 1.134327290913469e-08, "gauss_jacobian_min_m3": 1.3401930194848324e-09, "intentional_traction_free_tip_faces": 0, "labeled_exterior_faces": 3680, "measures": {"base_area_cm2": 18.574240989146706, "endocardial_area_cm2": 155.3715972641876, "epicardial_area_cm2": 228.5256503934378, "wall_volume_cm3": 177.5474744259813}, "mesh_topology": "closed_multiblock_disk", "multiply_labeled_faces": 0, "nodes": 5403, "nonexterior_labeled_faces": 0, "nonmanifold_faces": 0, "nonpositive_extended_jacobians": 0, "nonpositive_gauss_jacobians": 0, "passed": true, "reference_relative_differences": {"base_area_cm2": -0.00016412570688706385, "endocardial_area_cm2": 0.0006946841907646828, "epicardial_area_cm2": 9.025356557157416e-05, "wall_volume_cm3": -0.0008282836261473969}, "require_closed": true, "schema": "coupfe-cardiac-pre-solve-geometry-v1", "traction_free_tip_mu_rad": null, "unclassified_exterior_faces": 0, "unexpected_unclassified_exterior_faces": 0, "x_extent_mm": [-97.0, 26.470588235294112]}, "pressure": {"analytic_projected_base_area_m2": 0.0017936428645062834, "declared_surface_expected_axial_resultant_N": 0.0017936428645062834, "expected_to_closed_analytic_axial_ratio": 1.0, "expected_unit_pressure_moment_Nm": [0.0, 0.0, 0.0], "expected_unit_pressure_resultant_N": [0.0017936428645062834, 0.0, 0.0], "failures": [], "normalized_moment": 5.003547273239625e-16, "passed": true, "pressure_surface_policy": "closed_analytic_base_projection", "relative_magnitude_error": 0.0010277667514629885, "relative_resultant_error": 0.0010277667514629735, "relative_signed_axial_error": 0.0010277667514629885, "schema": "coupfe-cardiac-pre-solve-pressure-v1", "signed_axial_ratio": 0.998972233248537, "transverse_fraction": 1.0888293981967451e-15, "unit_pressure_moment_Nm": [-5.04864516992912e-21, -5.406452483646589e-20, 7.145517003478074e-20], "unit_pressure_resultant_N": [0.001791799418006145, -6.716971271726602e-19, -1.8338263308055602e-18]}, "robin": {"active_dofs": 5883, "dashpot_symmetry_error": 6.938893903907228e-18, "failures": [], "passed": true, "schema": "coupfe-cardiac-pre-solve-robin-v1", "spring_symmetry_error": 1.7053025658242404e-13}}
+formulation: rank-local standard Hex8 material with pointwise kappa=1.000e+06 Pa
+mass: consistent Q1-Hex8, complete PETSc-owned CSR rows
+fiber sampling: gp_direct_rule
+material viscosity: eta=100 Pa s (paper parameter fixed)
+element evaluation: joint (compiled material residual-only available=True)
+nonlinear solver: persistent PETSc COMM_WORLD SNES newtonls + bt, linear profile=direct-superlu-dist
+time integration: source-matched generalized-alpha alpha_m=0.2 alpha_f=0.4 gamma=0.7 beta=0.36; material/Robin/active load at 1-alpha_f, inertia at 1-alpha_m
+Hex8 output sampling: p0 elem=3169 |recon|=4.474e-14mm; p1 elem=3109 |recon|=2.777e-13mm
+  step    1 t=0.001s  tau=      0.0Pa p=     4.2Pa  nit= 2  |u|max=  0.000mm  u0=(+0.00,+0.00,+0.00)mm
+  step    2 t=0.002s  tau=      0.0Pa p=    11.0Pa  nit= 2  |u|max=  0.001mm  u0=(+0.00,+0.00,+0.00)mm
+  step   40 t=0.040s  tau=      0.0Pa p=   178.9Pa  nit= 2  |u|max=  0.181mm  u0=(+0.18,+0.00,+0.01)mm
+  step   80 t=0.080s  tau=      0.0Pa p=   248.5Pa  nit= 2  |u|max=  0.284mm  u0=(+0.27,+0.00,+0.02)mm
+  step  120 t=0.120s  tau=      0.0Pa p=   275.1Pa  nit= 2  |u|max=  0.328mm  u0=(+0.31,-0.00,+0.02)mm
+  step  160 t=0.160s  tau=      0.0Pa p=   285.7Pa  nit= 2  |u|max=  0.347mm  u0=(+0.33,-0.00,+0.02)mm
+  step  200 t=0.200s  tau=  14965.6Pa p=  4207.5Pa  nit= 3  |u|max=  5.789mm  u0=(-5.13,+0.56,+2.12)mm
+  step  240 t=0.240s  tau=  30377.5Pa p=  8631.4Pa  nit= 3  |u|max= 20.563mm  u0=(-19.36,+2.00,+3.80)mm
+  step  280 t=0.280s  tau=  43001.6Pa p= 11480.5Pa  nit= 3  |u|max= 30.485mm  u0=(-29.27,+2.61,+3.06)mm
+  step  320 t=0.320s  tau=  53329.9Pa p= 13316.6Pa  nit= 2  |u|max= 32.583mm  u0=(-31.39,+2.71,+3.43)mm
+  step  360 t=0.360s  tau=  61792.7Pa p= 14498.0Pa  nit= 2  |u|max= 33.729mm  u0=(-32.55,+2.75,+3.60)mm
+  step  400 t=0.400s  tau=  68718.4Pa p= 15259.3Pa  nit= 2  |u|max= 34.296mm  u0=(-33.13,+2.75,+3.81)mm
+  step  440 t=0.440s  tau=  74388.0Pa p= 15749.2Pa  nit= 2  |u|max= 34.569mm  u0=(-33.41,+2.74,+3.99)mm
+  step  480 t=0.480s  tau=  78728.0Pa p= 16062.3Pa  nit= 2  |u|max= 34.705mm  u0=(-33.55,+2.73,+4.13)mm
+  step  520 t=0.520s  tau=  28050.0Pa p=  6079.7Pa  nit= 3  |u|max= 26.242mm  u0=(-25.10,+2.13,+3.83)mm
+  step  560 t=0.560s  tau=   8447.3Pa p=  1905.9Pa  nit= 3  |u|max= 15.354mm  u0=(-14.28,+1.23,+3.52)mm
+  step  600 t=0.600s  tau=   2544.0Pa p=   597.5Pa  nit= 3  |u|max=  9.212mm  u0=(-8.33,+0.61,+1.68)mm
+  step  640 t=0.640s  tau=    766.2Pa p=   187.3Pa  nit= 3  |u|max=  5.210mm  u0=(-4.56,+0.27,+0.70)mm
+  step  680 t=0.680s  tau=    230.8Pa p=    58.7Pa  nit= 3  |u|max=  2.972mm  u0=(-2.50,+0.12,+0.31)mm
+  step  720 t=0.720s  tau=     69.5Pa p=    18.4Pa  nit= 3  |u|max=  1.716mm  u0=(-1.39,+0.06,+0.15)mm
+  step  760 t=0.760s  tau=     20.9Pa p=     5.8Pa  nit= 3  |u|max=  1.030mm  u0=(-0.72,+0.02,+0.07)mm
+  step  800 t=0.800s  tau=      6.3Pa p=     1.8Pa  nit= 3  |u|max=  0.475mm  u0=(-0.27,+0.00,+0.01)mm
+  step  840 t=0.840s  tau=      1.9Pa p=     0.6Pa  nit= 2  |u|max=  0.123mm  u0=(-0.06,+0.01,-0.01)mm
+  step  880 t=0.880s  tau=      0.6Pa p=     0.2Pa  nit= 2  |u|max=  0.068mm  u0=(-0.03,+0.00,-0.00)mm
+  step  920 t=0.920s  tau=      0.2Pa p=     0.1Pa  nit= 2  |u|max=  0.042mm  u0=(-0.02,+0.00,-0.00)mm
+  step  960 t=0.960s  tau=      0.1Pa p=     0.0Pa  nit= 2  |u|max=  0.027mm  u0=(-0.01,+0.00,-0.00)mm
+  step 1000 t=1.000s  tau=      0.0Pa p=     0.0Pa  nit= 2  |u|max=  0.017mm  u0=(-0.01,+0.00,-0.00)mm
+elapsed 1144.7s
+saved -> runs/step2b/coarse_nt2_core20_rad17/mpi4_ga_full.npz

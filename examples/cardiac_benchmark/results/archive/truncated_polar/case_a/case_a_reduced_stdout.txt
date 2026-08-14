@@ -1,0 +1,42 @@
+$ python examples/cardiac_benchmark/run.py --case A --integrator be --nt 1 --nmu 2 --ntheta 4 --apex-offset 0.2 --dt 0.002 --tend 1.0 --build-dir build --out case_a_reduced.npz
+mesh: 24 nodes, 8 hexes, ndof=72  (single-field)
+  Generated: build/cardiac_hex8_fbar.for
+  Material:  HolzapfelOgdenActive
+  Fields:    u
+  Element:   Hex8
+  Backend:   native
+  NDOFEL:    24
+  F-bar:     True
+CASE A: tau_peak=118042.8Pa  p_peak=0.0Pa
+p0 interp recon |err|=0.000mm ; p1 |err|=0.000mm
+  step    1 t=0.002s  load=      0.0Pa  nit= 1  |u|max=  0.000mm  u0=(+0.00,+0.00,+0.00)mm
+  step    2 t=0.004s  load=      0.0Pa  nit= 1  |u|max=  0.000mm  u0=(+0.00,+0.00,+0.00)mm
+  step   20 t=0.040s  load=      0.0Pa  nit= 1  |u|max=  0.000mm  u0=(+0.00,+0.00,+0.00)mm
+  step   40 t=0.080s  load=      0.0Pa  nit= 1  |u|max=  0.000mm  u0=(+0.00,+0.00,+0.00)mm
+  step   60 t=0.120s  load=      0.0Pa  nit= 1  |u|max=  0.000mm  u0=(+0.00,+0.00,+0.00)mm
+  step   80 t=0.160s  load=      0.0Pa  nit= 1  |u|max=  0.000mm  u0=(+0.00,+0.00,+0.00)mm
+  step  100 t=0.200s  load=  22703.3Pa  nit= 4  |u|max= 14.490mm  u0=(-13.80,-1.88,-0.25)mm
+  step  120 t=0.240s  load=  45777.7Pa  nit= 3  |u|max= 18.970mm  u0=(-18.37,-2.49,-0.20)mm
+  step  140 t=0.280s  load=  64671.8Pa  nit= 3  |u|max= 19.832mm  u0=(-19.21,-2.55,-0.19)mm
+  step  160 t=0.320s  load=  80138.6Pa  nit= 3  |u|max= 20.410mm  u0=(-19.77,-2.59,-0.17)mm
+  step  180 t=0.360s  load=  92799.1Pa  nit= 3  |u|max= 20.831mm  u0=(-20.17,-2.61,-0.16)mm
+  step  200 t=0.400s  load= 103173.5Pa  nit= 3  |u|max= 21.151mm  u0=(-20.48,-2.62,-0.15)mm
+  step  220 t=0.440s  load= 111647.5Pa  nit= 3  |u|max= 21.399mm  u0=(-20.72,-2.63,-0.15)mm
+  step  240 t=0.480s  load= 118042.8Pa  nit= 3  |u|max= 21.584mm  u0=(-20.90,-2.64,-0.14)mm
+  step  260 t=0.520s  load=  41564.4Pa  nit= 3  |u|max= 18.911mm  u0=(-18.34,-2.50,-0.20)mm
+  step  280 t=0.560s  load=  12519.7Pa  nit= 3  |u|max= 16.601mm  u0=(-16.12,-2.26,-0.22)mm
+  step  300 t=0.600s  load=   3771.1Pa  nit= 3  |u|max= 14.356mm  u0=(-13.93,-1.94,-0.24)mm
+  step  320 t=0.640s  load=   1135.9Pa  nit= 3  |u|max= 11.816mm  u0=(-11.42,-1.56,-0.25)mm
+  step  340 t=0.680s  load=    342.1Pa  nit= 3  |u|max=  9.071mm  u0=(-8.69,-1.15,-0.26)mm
+  step  360 t=0.720s  load=    103.0Pa  nit= 3  |u|max=  6.496mm  u0=(-6.13,-0.78,-0.27)mm
+  step  380 t=0.760s  load=     31.0Pa  nit= 3  |u|max=  4.410mm  u0=(-4.06,-0.49,-0.26)mm
+  step  400 t=0.800s  load=      9.3Pa  nit= 3  |u|max=  2.878mm  u0=(-2.53,-0.29,-0.25)mm
+  step  420 t=0.840s  load=      2.8Pa  nit= 3  |u|max=  1.828mm  u0=(-1.51,-0.15,-0.22)mm
+  step  440 t=0.880s  load=      0.8Pa  nit= 3  |u|max=  1.188mm  u0=(-0.97,-0.08,-0.20)mm
+  step  460 t=0.920s  load=      0.3Pa  nit= 3  |u|max=  0.716mm  u0=(-0.59,-0.05,-0.18)mm
+  step  480 t=0.960s  load=      0.1Pa  nit= 3  |u|max=  0.385mm  u0=(-0.29,-0.02,-0.15)mm
+  step  500 t=1.000s  load=      0.0Pa  nit= 3  |u|max=  0.271mm  u0=(-0.10,-0.00,-0.10)mm
+saved -> case_a_reduced.npz
+
+This transcript omits environment-specific wall time. The complete solve
+finished 500/500 steps and wrote a converged result archive.

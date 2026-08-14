@@ -1,0 +1,77 @@
+{
+  "schema": "coupfe-cardiac-step2b-publisher-hashes-v1",
+  "source_doi": "https://doi.org/10.5281/zenodo.14260459",
+  "selection_source": "benchmark_article_data/results_time_curves/figures.py::TEAMS_DATASETS_B",
+  "files": [
+    {
+      "team_id": "carpentry",
+      "label": "CARPentry",
+      "filename": "monoventricular_blinded_B_group_carpentry.pkl",
+      "sha256": "563837f6e11691e1c41c1a3ed5438451b3ab1a2eadfb24e1e3e9fb430f00d70d",
+      "size_bytes": 8651
+    },
+    {
+      "team_id": "ambit",
+      "label": "Ambit",
+      "filename": "monoventricular_blinded_B_group_ambit.pkl",
+      "sha256": "e038dccddcc5a912c43ef24f437c78e9e32ba7c17ab6f590dccab7f7377585b0",
+      "size_bytes": 7820
+    },
+    {
+      "team_id": "4c",
+      "label": "4C",
+      "filename": "monoventricular_blinded_B_group_4c.pkl",
+      "sha256": "6afadc48cfa61f8d1e5d75501eff5fbe07919e1d9b00d999f183435a25893c57",
+      "size_bytes": 8036
+    },
+    {
+      "team_id": "simula",
+      "label": "Simula",
+      "filename": "monoventricular_blinded_B_group_simula.pkl",
+      "sha256": "a1f7de71bf538543ae30e42325d01e766fc51bb5c6801fa961923eb17af3ff63",
+      "size_bytes": 7820
+    },
+    {
+      "team_id": "chimera",
+      "label": "CHimeRA",
+      "filename": "monoventricular_blinded_B_group_chimera.pkl",
+      "sha256": "3b3434f26879764e9c1118c3ab0e96636139a18d5282290b37a9f98888808d79",
+      "size_bytes": 14344
+    },
+    {
+      "team_id": "cheart",
+      "label": "CHeart",
+      "filename": "monoventricular_blinded_B_group_cheart.pkl",
+      "sha256": "ffd18d31f3012152007966e592349938b4c2bb36f05295e7beaa7ed0cd9e372c",
+      "size_bytes": 7820
+    },
+    {
+      "team_id": "lifex",
+      "label": "lifeX",
+      "filename": "monoventricular_blinded_B_group_lifex.pkl",
+      "sha256": "d09551fb0588326e62d507e7dcf0d28fbd106b43931fd4a424f214bef88d064d",
+      "size_bytes": 7820
+    },
+    {
+      "team_id": "simvascular_p1",
+      "label": "SimVascular P1",
+      "filename": "monoventricular_blinded_B_group_simvascular_p1p1.pkl",
+      "sha256": "d7ae0647ec4610ed2e3dbdf2cd6cc04113ea668d9dcd6d4e6c13df1e13918b05",
+      "size_bytes": 7820
+    },
+    {
+      "team_id": "simvascular_p2",
+      "label": "SimVascular P2",
+      "filename": "monoventricular_blinded_B_group_simvascular_p2.pkl",
+      "sha256": "acef353085f987b3768d8b1dccc8864eb469ed37484a0622aae9bd822fdd6949",
+      "size_bytes": 7820
+    },
+    {
+      "team_id": "comsol",
+      "label": "COMSOL",
+      "filename": "monoventricular_blinded_B_group_comsol.pkl",
+      "sha256": "e4768a53a34211ec42d54ed7f544192fc3be6fd947fc51cbb04133ab0d4b1b51",
+      "size_bytes": 7854
+    }
+  ]
+}

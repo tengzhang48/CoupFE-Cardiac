@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coupfe-cardiac"
+version = "0.1.0"
+description = "Experimental cardiac elastodynamics benchmark application built on CoupFE."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "CoupMech Lab" }]
+license = "Apache-2.0 AND CC-BY-4.0 AND MIT"
+license-files = [
+    "LICENSE",
+    "NOTICE",
+    "THIRD_PARTY_NOTICES.md",
+    "docs/LICENSE.md",
+    "LICENSES/*.txt",
+]
+keywords = ["finite-element-method", "cardiac-mechanics", "elastodynamics", "benchmark"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "coupfe[codegen,runtime] @ git+https://github.com/tengzhang48/CoupFE.git@e2f42ed5772850a0a23a2ce434f430c287eae5c8",
+    "numpy>=1.21",
+    "scipy>=1.7",
+]
+
+[project.optional-dependencies]
+reference = ["matplotlib>=3.5"]
+mpi = ["mpi4py", "petsc4py"]
+dev = ["pytest>=7", "build>=1", "twine>=5"]
+
+[project.urls]
+Homepage = "https://github.com/tengzhang48/CoupFE-Cardiac"
+Repository = "https://github.com/tengzhang48/CoupFE-Cardiac"
+Documentation = "https://github.com/tengzhang48/CoupFE-Cardiac/tree/main/docs"
+Issues = "https://github.com/tengzhang48/CoupFE-Cardiac/issues"
+Paper = "https://doi.org/10.1016/j.cma.2024.117485"
+Dataset = "https://doi.org/10.5281/zenodo.14260459"
+
+[tool.setuptools]
+# Source application: examples are run from a clone; wheels intentionally carry metadata/notices only.
+py-modules = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not slow and not mpi'"
+markers = [
+    "slow: compiles/runs the serial cardiac kernel; opt in with -m slow",
+    "mpi: requires a matched PETSc/MPI installation; opt in with -m mpi",
+]

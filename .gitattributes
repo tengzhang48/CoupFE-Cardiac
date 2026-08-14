@@ -1,0 +1,2 @@
+# Matplotlib SVG path continuations intentionally end with one separator space.
+*.svg whitespace=-blank-at-eol,-blank-at-eof

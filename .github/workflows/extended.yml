@@ -1,0 +1,50 @@
+name: opt-in cardiac gates
+
+on:
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: Extended gate to run
+        required: true
+        type: choice
+        options:
+          - slow
+          - mpi
+
+permissions:
+  contents: read
+
+jobs:
+  slow:
+    if: ${{ inputs.suite == 'slow' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: sudo apt-get update && sudo apt-get install -y gfortran ninja-build
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -e ".[dev]"
+      - run: python .github/scripts/check_runtime_core.py
+      - run: python -m pytest -q -m slow
+
+  mpi:
+    if: ${{ inputs.suite == 'mpi' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: >-
+          sudo apt-get update &&
+          sudo apt-get install -y
+          gfortran ninja-build openmpi-bin libopenmpi-dev
+          python3-venv python3-mpi4py python3-petsc4py-real libpetsc-real-dev
+      - run: /usr/bin/python3 -m venv --system-site-packages .ci-venv
+      - run: .ci-venv/bin/python -m pip install --upgrade pip
+      - run: .ci-venv/bin/python -m pip install -e ".[dev]"
+      - run: .ci-venv/bin/python .github/scripts/check_runtime_core.py
+      - run: .ci-venv/bin/python -m pytest -q -m mpi
+        env:
+          OMP_NUM_THREADS: "1"
+          OMPI_MCA_rmaps_base_oversubscribe: "1"

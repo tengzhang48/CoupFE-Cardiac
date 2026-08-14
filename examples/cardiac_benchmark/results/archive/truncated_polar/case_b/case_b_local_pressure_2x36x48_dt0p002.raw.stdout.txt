@@ -1,0 +1,42 @@
+mesh: 5328 nodes, 3456 hexes, ndof=15984  (displacement system)
+  Generated: build-case-b-lp-2x36x48-dt0p002/cardiac_hex8_std.for
+  Material:  HolzapfelOgdenActive
+  Fields:    u
+  Element:   Hex8
+  Backend:   native
+  NDOFEL:    24
+  F-bar:     False
+  Tangent blocks: 1
+formulation: standard Hex8 material (kappa=0) + one exactly condensed element pressure, K=1.000e+06 Pa
+CASE B: tau_peak=0.0Pa  p_peak=16071.0Pa
+nonlinear solver: PETSc SNES newtonls + bt, preonly + LU (recovered 2026-06-27 settings)
+Hex8 output sampling: p0 elem=1728 |recon|=8.112e-15mm; p1 elem=2016 |recon|=4.214e-13mm
+  step    1 t=0.002s  load=     13.7Pa  nit= 2  |u|max=  0.002mm  u0=(+0.00,+0.00,+0.00)mm
+  step    2 t=0.004s  load=     26.7Pa  nit= 2  |u|max=  0.005mm  u0=(+0.00,+0.00,+0.00)mm
+  step   20 t=0.040s  load=    180.0Pa  nit= 2  |u|max=  0.342mm  u0=(+0.32,+0.03,+0.00)mm
+  step   40 t=0.080s  load=    248.9Pa  nit= 2  |u|max=  0.722mm  u0=(+0.69,+0.06,-0.00)mm
+  step   60 t=0.120s  load=    275.3Pa  nit= 2  |u|max=  0.878mm  u0=(+0.85,+0.10,-0.00)mm
+  step   80 t=0.160s  load=    285.8Pa  nit= 2  |u|max=  0.941mm  u0=(+0.92,+0.12,-0.01)mm
+  step  100 t=0.200s  load=   4262.0Pa  nit= 3  |u|max=  4.755mm  u0=(+4.59,+0.49,+0.04)mm
+  step  120 t=0.240s  load=   8666.6Pa  nit= 3  |u|max= 13.247mm  u0=(+13.14,+0.25,-0.10)mm
+  step  140 t=0.280s  load=  11503.1Pa  nit= 4  |u|max= 14.867mm  u0=(+3.10,+0.15,-12.96)mm
+  step  160 t=0.320s  load=  13331.2Pa  nit= 3  |u|max= 23.711mm  u0=(-16.54,+0.94,-14.21)mm
+  step  180 t=0.360s  load=  14507.4Pa  nit= 3  |u|max= 29.608mm  u0=(-23.65,+1.31,-14.27)mm
+  step  200 t=0.400s  load=  15265.4Pa  nit= 3  |u|max= 33.710mm  u0=(-28.58,+1.58,-14.21)mm
+  step  220 t=0.440s  load=  15753.1Pa  nit= 3  |u|max= 37.294mm  u0=(-32.68,+1.82,-14.12)mm
+  step  240 t=0.480s  load=  16064.5Pa  nit= 3  |u|max= 40.246mm  u0=(-36.08,+2.03,-14.01)mm
+  step  260 t=0.520s  load=   6009.6Pa  nit= 4  |u|max= 30.231mm  u0=(-26.27,+1.85,-9.93)mm
+  step  280 t=0.560s  load=   1883.9Pa  nit= 5  |u|max=  4.352mm  u0=(-1.33,+0.63,-0.43)mm
+  step  300 t=0.600s  load=    590.6Pa  nit= 3  |u|max=  2.728mm  u0=(+2.61,+0.31,-0.64)mm
+  step  320 t=0.640s  load=    185.1Pa  nit= 2  |u|max=  1.657mm  u0=(+1.16,+0.27,-0.48)mm
+  step  340 t=0.680s  load=     58.0Pa  nit= 2  |u|max=  1.234mm  u0=(+0.46,+0.21,-0.36)mm
+  step  360 t=0.720s  load=     18.2Pa  nit= 2  |u|max=  1.005mm  u0=(+0.13,+0.16,-0.28)mm
+  step  380 t=0.760s  load=      5.7Pa  nit= 2  |u|max=  0.972mm  u0=(-0.00,+0.13,-0.23)mm
+  step  400 t=0.800s  load=      1.8Pa  nit= 2  |u|max=  0.928mm  u0=(-0.04,+0.10,-0.18)mm
+  step  420 t=0.840s  load=      0.6Pa  nit= 2  |u|max=  0.881mm  u0=(-0.05,+0.08,-0.15)mm
+  step  440 t=0.880s  load=      0.2Pa  nit= 2  |u|max=  0.833mm  u0=(-0.04,+0.06,-0.12)mm
+  step  460 t=0.920s  load=      0.1Pa  nit= 2  |u|max=  0.786mm  u0=(-0.02,+0.05,-0.09)mm
+  step  480 t=0.960s  load=      0.0Pa  nit= 2  |u|max=  0.740mm  u0=(-0.01,+0.05,-0.07)mm
+  step  500 t=1.000s  load=      0.0Pa  nit= 2  |u|max=  0.698mm  u0=(-0.00,+0.04,-0.06)mm
+elapsed 6315.3s
+saved -> case_b_local_pressure_2x36x48_dt0p002.npz

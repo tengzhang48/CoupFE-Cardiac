@@ -1,0 +1,6 @@
+# generated kernel + build artifacts (regenerate via material.build_kernel)
+*.f90
+cardiac_*.for
+# simulation outputs / plots
+*.npz
+*.png

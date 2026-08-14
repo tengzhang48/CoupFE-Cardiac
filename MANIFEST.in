@@ -1,0 +1,22 @@
+include LICENSE
+include .gitattributes
+include .gitignore
+include NOTICE
+include README.md
+include THIRD_PARTY_NOTICES.md
+include CONTRIBUTING.md
+include setup.sh
+recursive-include LICENSES *.txt
+recursive-include .github *.py *.yml
+recursive-include docs *.md
+include docs/figures/case_a_comparison.svg
+include docs/figures/step0b_tip_refine_full_cycle.svg
+include docs/figures/step2_case_b_comparison.svg
+include docs/figures/step2b_current_rerun_comparison.svg
+include docs/figures/archive/truncated_polar/case_a_comparison.svg
+include docs/figures/archive/truncated_polar/case_b_comparison.svg
+recursive-include examples *.py *.md *.json *.txt
+include examples/cardiac_benchmark/.gitignore
+recursive-include skills *.md
+recursive-include tests *.py
+global-exclude __pycache__ *.py[cod] *.so *.o *.npz *.pickle .DS_Store

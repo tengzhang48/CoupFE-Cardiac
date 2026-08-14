@@ -1,0 +1,27 @@
+{
+  "description": "Known local FEniCS Case B displacement-output identities. These hashes identify the retained files and parameters; they do not establish the producing source revision.",
+  "files": {
+    "fenics-p0": {
+      "filename": "componentwise_displacement_up0.npy",
+      "sha256": "4344a4f599a6eabb16159682339a735bff572eaa18eedd1fe2a97ebd3ee7f4a0",
+      "size_bytes": 24104
+    },
+    "fenics-p1": {
+      "filename": "componentwise_displacement_up1.npy",
+      "sha256": "88a679de2189bc137de5d64186c698f1702e9df20333849377cdfd01aac8bf1e",
+      "size_bytes": 24104
+    },
+    "fenics-parameters": {
+      "filename": "parameters.json",
+      "sha256": "c1cd4c8d2521fd6c28774975843740a8af12568edd1240f5daa133d469e6fb76",
+      "size_bytes": 1385
+    },
+    "fenics-times": {
+      "filename": "time_stamps.npy",
+      "sha256": "ddba330b1c8f8c1bb61282e187047f3aa99d0df37b2c4ed2139ea1b0e0ff0f0c",
+      "size_bytes": 8120
+    }
+  },
+  "provenance_boundary": "The producing FEniCS source revision was not retained contemporaneously. A nearby clean clone is contextual and is not claimed as the producer of these files.",
+  "schema": "coupfe-cardiac-comparison-input-hashes-v1"
+}

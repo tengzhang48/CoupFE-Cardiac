@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+*.so
+*.o
+*.mod
+cardiac_scale_U_*.npy
+.DS_Store
+# large reference PDFs (re-downloadable; see memory / README)
+docs/references/

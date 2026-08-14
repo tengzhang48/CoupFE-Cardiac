@@ -1,0 +1,303 @@
+{
+  "benchmark_identity": {
+    "benchmark": "Benchmark 1",
+    "case": "step_0B",
+    "configuration_id": "benchmark-1-step-0-case-B-pressure-only",
+    "identity_scope": "explicit archive metadata",
+    "pressure_enabled": true,
+    "active_stress_enabled": false
+  },
+  "bounded_claim": "This compact report binds two completed, clean, eight-rank CoupFE-Cardiac prefixes through 0.32 s and the controlled diagnostics used to decide whether a full-cycle run is meaningful. It is not a 1 s result, a spatial-convergence proof, or a claim that the identified Robin-faceting mechanism is the only source of the remaining CoupFE/local-FEniCS-reference difference.",
+  "comparison": {
+    "coarse_2x20x17": {
+      "fenics_vector_rmse_0_0p32_mm": {
+        "p0": 2.588853347120452,
+        "p1": 2.5304216486926268
+      },
+      "fenics_vector_rmse_0p20_0p32_mm": {
+        "p0": 4.216175399170384,
+        "p1": 4.121390465867699
+      },
+      "landmarks_at_0p32_s_mm": {
+        "p0": [
+          -22.153406181382334,
+          1.2584421728754263,
+          -15.162643877397368
+        ],
+        "p1": [
+          -23.301088095322267,
+          0.557504248471937,
+          -16.143092589657407
+        ]
+      },
+      "landmarks_minus_fenics_at_0p32_s_mm": {
+        "p0": [
+          -6.089053884090603,
+          0.16981276865805547,
+          0.8772137116739038
+        ],
+        "p1": [
+          -6.2586825686531435,
+          0.16302093386256827,
+          0.4838529390230814
+        ]
+      }
+    },
+    "fenics_landmarks_at_0p32_s_mm": {
+      "p0": [
+        -16.06435229729173,
+        1.0886294042173708,
+        -16.03985758907127
+      ],
+      "p1": [
+        -17.042405526669125,
+        0.39448331460936875,
+        -16.62694552868049
+      ]
+    },
+    "reference_scope": {
+      "local_fenics_discretization": "P2 tetrahedral displacement",
+      "local_fenics_producer_revision": "not retained contemporaneously",
+      "team_curve_count": 10,
+      "team_curves_are": "finite-mesh participant results on the canonical 0.01 s grid, not a continuum oracle"
+    },
+    "wall_only_4x20x17": {
+      "fenics_vector_rmse_0_0p32_mm": {
+        "p0": 2.3498605204818146,
+        "p1": 2.2156945767285476
+      },
+      "fenics_vector_rmse_0p20_0p32_mm": {
+        "p0": 3.8269685946320404,
+        "p1": 3.6087600180210955
+      },
+      "landmarks_at_0p32_s_mm": {
+        "p0": [
+          -22.276569954259397,
+          1.2343423606448676,
+          -15.82106384295934
+        ],
+        "p1": [
+          -22.877477381450102,
+          0.4199220932203219,
+          -16.57584106563464
+        ]
+      },
+      "landmarks_minus_fenics_at_0p32_s_mm": {
+        "p0": [
+          -6.212217656967667,
+          0.14571295642749676,
+          0.21879374611193103
+        ],
+        "p1": [
+          -5.835071854780976,
+          0.025438778610953134,
+          0.051104463045847925
+        ]
+      }
+    }
+  },
+  "completion": {
+    "coarse_2x20x17": {
+      "completed_steps": 320,
+      "converged": true,
+      "expected_steps": 320,
+      "function_domain_rejections_total": 0,
+      "mpi_ranks": 8,
+      "pre_solve_audits_passed": true,
+      "status": "complete"
+    },
+    "wall_only_4x20x17": {
+      "completed_steps": 320,
+      "converged": true,
+      "expected_steps": 320,
+      "function_domain_rejections_total": 0,
+      "mpi_ranks": 8,
+      "pre_solve_audits_passed": true,
+      "status": "complete"
+    }
+  },
+  "configuration": {
+    "density_kg_m3": 1000.0,
+    "dt_s": 0.001,
+    "element_evaluation": "joint",
+    "fiber_direction_reconstruction": "toolkit-physical-coordinate-u-v-v1",
+    "fiber_sampling": "gp_direct_rule",
+    "formulation": "hex8_local_pressure_p0_condensed_logj",
+    "generalized_alpha": {
+      "alpha_f": 0.4,
+      "alpha_m": 0.2,
+      "beta": 0.36,
+      "gamma": 0.7,
+      "stage_contract": "simula-source-matched-v1"
+    },
+    "linear_solver_profile": "fgmres-gamg-rigid-rebuild",
+    "load_horizon_s": 1.0,
+    "local_pressure_bulk_modulus_pa": 1000000.0,
+    "local_pressure_volume_law": "linear-reference-volume-mean-log-j-v1",
+    "mass": "consistent_q1_hex8",
+    "material_eta_pa_s": 100.0,
+    "mesh_topology": "closed_multiblock_disk",
+    "point_sampling": "hex8_reference_isoparametric",
+    "t_end_s": 0.32,
+    "viscous_rate": "velocity_consistent_green_lagrange_at_alpha_f_stage"
+  },
+  "decision": {
+    "full_1s_status": "paused",
+    "reason": "The 0.20--0.32 s snap window already isolates a strong surface-resolution association, quantifies a consistent Robin-faceting mechanism, and leaves a local axial difference unresolved. Extending the same configuration cannot identify the remaining cause.",
+    "restart_condition": "Define a new controlled hypothesis that changes the unresolved discrete surface comparison without changing or tuning the prescribed Robin law."
+  },
+  "excluded_attempts": [
+    {
+      "archive_sha256": "9c51595894482efba79e0ced57885bab37fa9a054f9aee2f575273291fd859e0",
+      "name": "first current-frame coarse attempt",
+      "reason": "Documentation edits made the shared application checkout dirty before final archive metadata was captured. The numerical history agreed with the isolated clean repeat to roundoff, but the archive is excluded from evidence by provenance policy.",
+      "status": "completed but excluded"
+    },
+    {
+      "name": "first current-frame wall-only attempt",
+      "reason": "Stopped at the provenance gate after the shared application checkout became dirty; no completed archive was written.",
+      "status": "stopped"
+    }
+  ],
+  "external_artifacts": {
+    "clean_coarse_archive": {
+      "filename": "step0b_local_pressure_ga_nt2_core20_rad17_t0p32_frame_clean.npz",
+      "sha256": "efc7e42a60218ab275df2250ae4383f081554e25c46beee1c25cff3248c47785",
+      "size_bytes": 4230714
+    },
+    "clean_coarse_stdout": {
+      "filename": "step0b_local_pressure_ga_nt2_core20_rad17_t0p32_frame_clean.stdout.txt",
+      "sha256": "75f2f398c677e2ecf471af160c3e7463cef05231a7928c7bff1d5b4e98b58325",
+      "size_bytes": 20752
+    },
+    "clean_comparison_figure": {
+      "filename": "clean_physical_frame_prefix_comparison.png",
+      "sha256": "47101f15e4afcc577cd299448b4ce7406c407941f7f931c86078d81dc90d6261",
+      "size_bytes": 408868
+    },
+    "clean_comparison_metrics": {
+      "filename": "clean_physical_frame_prefix_metrics.json",
+      "sha256": "8350e74322daa2b663f3d69511b83c9d9e770d137401f3eae730fa1893cacfaa",
+      "size_bytes": 14955
+    },
+    "clean_wall_only_archive": {
+      "filename": "step0b_local_pressure_ga_nt4_core20_rad17_t0p32_frame_clean.npz",
+      "sha256": "dc79faa158f04007c2430592024c69030a0894bde02967caac6dc338194b706f",
+      "size_bytes": 4909486
+    },
+    "clean_wall_only_stdout": {
+      "filename": "step0b_local_pressure_ga_nt4_core20_rad17_t0p32_frame_clean.stdout.txt",
+      "sha256": "742e614121180f057423e200dc204c75a407ff248dbe70bd10f8eac710037253",
+      "size_bytes": 20886
+    },
+    "mesh_split_metrics": {
+      "filename": "corrected_mesh_split_prefix_metrics.json",
+      "sha256": "53f77f98fde598c31c151c33f1a16cf9aae18601767a8f5dcda5bb5c5d2241fc",
+      "size_bytes": 53581
+    },
+    "robin_mesh_audit": {
+      "filename": "robin_rigid_rotation_mesh_audit.json",
+      "sha256": "406c4226cd1f6cf6879acad2f46291c7d78786706f37f63707f0109716cfdd79",
+      "size_bytes": 34342
+    }
+  },
+  "fenics_input_identities": {
+    "componentwise_displacement_up0.npy": "4344a4f599a6eabb16159682339a735bff572eaa18eedd1fe2a97ebd3ee7f4a0",
+    "componentwise_displacement_up1.npy": "88a679de2189bc137de5d64186c698f1702e9df20333849377cdfd01aac8bf1e",
+    "parameters.json": "c1cd4c8d2521fd6c28774975843740a8af12568edd1240f5daa133d469e6fb76",
+    "time_stamps.npy": "ddba330b1c8f8c1bb61282e187047f3aa99d0df37b2c4ed2139ea1b0e0ff0f0c"
+  },
+  "mesh_split_diagnosis": {
+    "claim_boundary": "This controlled association quantifies a strong, consistent mechanism; it does not prove that the mechanism is the only source of the CoupFE/local-FEniCS-reference gap.",
+    "endpoint_vector_effect_ratio_surface_over_through_wall": {
+      "p0": 14.934657451968466,
+      "p1": 13.811520795117678
+    },
+    "surface_refinement_endpoint_effect_mm": {
+      "p0": 9.994119434960343,
+      "p1": 8.772180700395324
+    },
+    "through_wall_refinement_endpoint_effect_mm": {
+      "p0": 0.6691897331493911,
+      "p1": 0.6351350318710925
+    }
+  },
+  "mesh_inputs": {
+    "coarse_2x20x17": {
+      "element_connectivity_sha256": "a89d0e69bf16323b6b42e07c29aad9a844459cbcc81d161d42272441e340e59d",
+      "laplace_tbar_metadata_sha256": "e841c2681a2bc595269a6d35acd9860ba2e1f76e1f084f5141bdfbde283e5da4",
+      "laplace_tbar_sha256": "de24749a85b458c039a16a1e4b24422cf35d54cf853a40daa763e3137cb930a4",
+      "node_coordinates_sha256": "eb7c49c73420d88d57de09d1c4635aad587f211dfe4172acac4d7d8b0c2e4f9e"
+    },
+    "wall_only_4x20x17": {
+      "element_connectivity_sha256": "a4d13797359550a66fedd1b44bf9144789cb7c229528dec38b41e09c21152283",
+      "laplace_tbar_metadata_sha256": "ecb8227c3b3756e1a110e7b270e73a798555952d75a90f67daae794079bcca78",
+      "laplace_tbar_sha256": "2a7c0446958509fddd3df5630cf59f3fc040c5c4edee838b6217fc7ec41c1ee5",
+      "node_coordinates_sha256": "fbba09590449bc0568b0e0afd57f2f42a4b6f0542e84a67cb13d9ee5fa0ece25"
+    }
+  },
+  "physical_frame_control": {
+    "coarse_maximum_vector_change_mm": {
+      "p0": 0.034443540604170736,
+      "p1": 0.03071861376475084
+    },
+    "coarse_vector_rmse_mm": {
+      "p0": 0.008953068965353491,
+      "p1": 0.00878451766249128
+    },
+    "interpretation": "The source-faithful physical-coordinate frame correction is required, but it is a measured null result for the frame hypothesis on the benchmark-scale surface and does not explain the large Step 0B curve gap.",
+    "wall_only_maximum_vector_change_mm": {
+      "p0": 0.0347642979000087,
+      "p1": 0.03565276015928809
+    },
+    "wall_only_vector_rmse_mm": {
+      "p0": 0.010546283368794386,
+      "p1": 0.01076952791168627
+    }
+  },
+  "reference_data": {
+    "dataset_doi": "10.5281/zenodo.14260459",
+    "dataset_license": "CC BY 4.0",
+    "toolkit_revision": "e8d47553cfc83eb274eba3e177de33148e7f441c",
+    "upstream_repository": "https://github.com/Reidmen/cardiac_benchmark_toolkit"
+  },
+  "robin_surface_mechanism": {
+    "actual_elastic_epicardial_response_at_0p32_s": {
+      "coarse_2x20x17": {
+        "long_axis_internal_moment_Nm": -0.7717626324044258,
+        "spring_energy_J": 0.30840699830699403
+      },
+      "fine_4x36x32": {
+        "long_axis_internal_moment_Nm": -0.250147403394299,
+        "spring_energy_J": 0.11730432017424969
+      },
+      "surface_only_2x36x32": {
+        "long_axis_internal_moment_Nm": -0.248906315328351,
+        "spring_energy_J": 0.11675658584826096
+      },
+      "wall_only_4x20x17": {
+        "long_axis_internal_moment_Nm": -0.7744773787841672,
+        "spring_energy_J": 0.30535797551239696
+      }
+    },
+    "actual_response_caveat": "These are elastic spring descriptors reconstructed from U_peak. The generalized-alpha dashpot velocity is not recoverable exactly from U_peak alone.",
+    "continuum_expectation": "A rigid rotation about the long axis is tangential to the smooth axisymmetric epicardium and has zero epicardial normal-spring energy. Facet normals create a mesh-dependent discrete rotational restraint.",
+    "do_not_tune_rule": "The prescribed normal-only epicardial Robin law and coefficient are benchmark inputs. The diagnostic does not authorize changing either one to fit a curve.",
+    "rigid_long_axis_rotation_stiffness_Nm_per_rad": {
+      "coupfe_coarse_2x20x17": 1.4445549052539781,
+      "coupfe_fine_4x36x32": 0.5558277202968711,
+      "coupfe_surface_only_2x36x32": 0.5558277202968711,
+      "coupfe_wall_only_4x20x17": 1.4445549052539781,
+      "fenics_local_mesh": 1.8570484532865836
+    }
+  },
+  "schema": "coupfe-cardiac-step0b-prefix-diagnostic-v1",
+  "source_identity": {
+    "application_revision": "056c02df7c2a56bbc36e41973b7c8a8d8c917e2a",
+    "application_tree_state": "clean",
+    "benchmark_runtime_source_sha256": "bec13f9ab1bbd9e50116e05b7342501e6ff8992c5710f62b83bcd02a089b6cf1",
+    "core_revision": "e2f42ed5772850a0a23a2ce434f430c287eae5c8",
+    "core_tree_state": "clean",
+    "mesh_split_application_revision": "a2006b78104109c625ea3c502753b5cff15452d4"
+  }
+}
