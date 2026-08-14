@@ -48,6 +48,10 @@ jobs:
       - run: >-
           .ci-venv/bin/python -m pip install -e .
           "pytest>=7" "numpy==1.26.4"
+      # F2PY invokes the Meson and Ninja console scripts by name while compiling
+      # kernels, so expose the virtual environment's tool directory to child jobs.
+      - run: echo "$PWD/.ci-venv/bin" >> "$GITHUB_PATH"
+      - run: meson --version && ninja --version
       - run: >-
           .ci-venv/bin/python -c
           "import numpy; from mpi4py import MPI; from petsc4py import PETSc;
