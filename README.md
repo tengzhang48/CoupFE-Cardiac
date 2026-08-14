@@ -72,6 +72,15 @@ release-grade evidence. It is retained as a provenance-incomplete diagnostic,
 not headline benchmark evidence; see the [Step 2 Case B reproduction
 log](docs/STEP2_CASE_B_REPRODUCTION_LOG.md).
 
+![Step 2 Case B corrected-setup displacement diagnostic against the benchmark ten-team envelope](docs/figures/step2b_current_rerun_comparison.svg)
+
+*Step 2 Case B — corrected-setup Q1/P0 diagnostic at `p0`/`p1`, all three
+components. Full-history vector relative L2 against the ten-team mean is 3.76%
+at `p0` and 5.94% at `p1`, and the corrected z-component plateau signs at both
+points match the published team curves. The compact artifact remains
+provenance-incomplete, so this is promising diagnostic evidence, not yet a
+reproduction or validation claim.*
+
 The archived open-tip (truncated-polar) Step 0 Case B figure and reports
 are historical records from a non-benchmark geometry, retained for lessons
 only; see the [archive note](docs/figures/archive/truncated_polar/README.md)
