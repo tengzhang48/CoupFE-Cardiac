@@ -39,10 +39,20 @@ jobs:
           sudo apt-get update &&
           sudo apt-get install -y
           gfortran ninja-build openmpi-bin libopenmpi-dev
-          python3-venv python3-mpi4py python3-petsc4py-real libpetsc-real-dev
+          python3-venv python3-numpy python3-scipy python3-mpi4py
+          python3-petsc4py-real libpetsc-real-dev
       - run: /usr/bin/python3 -m venv --system-site-packages .ci-venv
       - run: .ci-venv/bin/python -m pip install --upgrade pip
-      - run: .ci-venv/bin/python -m pip install -e ".[dev]"
+      # Ubuntu's petsc4py extension is built against the distro NumPy 1.26 ABI.
+      # Keep that ABI visible while installing only the test tooling needed here.
+      - run: >-
+          .ci-venv/bin/python -m pip install -e .
+          "pytest>=7" "numpy==1.26.4"
+      - run: >-
+          .ci-venv/bin/python -c
+          "import numpy; from mpi4py import MPI; from petsc4py import PETSc;
+          print('NumPy', numpy.__version__, 'MPI', MPI.Get_version(),
+          'PETSc', PETSc.Sys.getVersion())"
       - run: .ci-venv/bin/python .github/scripts/check_runtime_core.py
       - run: .ci-venv/bin/python -m pytest -q -m mpi
         env:
